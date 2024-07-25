@@ -47,8 +47,8 @@ const moviesBySameDirector=filteredMoviesBySameDirector.filter((mov)=>mov.title!
                 <div className='sm:w-full md:w-1/4 relative py-10 '>
                   <Image 
                   src={movie.poster} 
-                  width={300} 
-                  height={300} 
+                  width={1920} 
+                  height={1080} 
                   className='w-full'/>
                 </div>
                 <div className='md:w-3/4 w-full p-10 '>
