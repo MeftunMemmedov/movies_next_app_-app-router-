@@ -3,7 +3,7 @@ import { LiaImdb } from "react-icons/lia";
 import { FaRegBookmark, FaPlay } from "react-icons/fa";
 import Image from 'next/image';
 import Link from 'next/link';
-import CarouselContainer from '@/components/CarouselContainer';
+import CarouselContainer from '@/components/movies/CarouselContainer';
 
 const url='https://flvxlsycpoxwclnqfrvr.supabase.co/rest/v1/Movies?select=*'
 const apiKey='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZsdnhsc3ljcG94d2NsbnFmcnZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDkxMjM4NDAsImV4cCI6MjAyNDY5OTg0MH0.6_-pdewIM3-_Ai2IGf1yhlOjeWZU9rta-l7oN35FDUs'
@@ -53,7 +53,7 @@ const moviesBySameDirector=filteredMoviesBySameDirector.filter((mov)=>mov.title!
                 </div>
                 <div className='md:w-3/4 w-full p-10 '>
                   <h2 className='text-4xl font-bold mb-1'>{movie.title}</h2>
-                  <p className='mb-4'>Directed by {movie.director.map((director)=>{return <Link href={`/persons/${director}`}>{director}</Link>})}</p>
+                  <p className='mb-4'>Directed by {movie.director.map((director)=>{return <Link href={`/person/${director}`}>{director}</Link>})}</p>
                   <p className='mb-2'>{movie.year}</p>
                   <div className='flex mb-2'>
                     {movie.genre.map((genre)=>{return <h4 className='mr-2'>{genre}</h4>})}

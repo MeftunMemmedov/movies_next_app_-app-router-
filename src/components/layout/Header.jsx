@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { BiMoviePlay } from "react-icons/bi";
 import { BsFillCameraReelsFill } from "react-icons/bs";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import SearchBar from './SearchBar.jsx'
+import SearchBar from '../header/SearchBar';
 
 const Header = ({isLoggedIn=false}) => {
   return (

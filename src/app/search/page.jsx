@@ -1,5 +1,5 @@
 'use client'
-import SingleMovie from '@/components/SingleMovie'
+import SingleMovie from '@/components/movies/SingleMovie'
 import { usePathname, useSearchParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
@@ -21,17 +21,21 @@ const SearchPage = () => {
     const q=searchParams.get('q')
     
     const results=searchResults.filter(mov=>mov.title.toLowerCase().includes(q.toLowerCase()))
+
+    const getMoviesForSearch=async()=>{
+      await fetch(url, options)
+            .then(res=>res.json())
+              .then(data=>setSearchResults(data))  
+    }
     console.log(results)
     useEffect(()=>{
-        fetch(url, options)
-        .then(res=>res.json())
-        .then(data=>setSearchResults(data))  
+        getMoviesForSearch()
     },[])
   return (
     <main>
         <section>
                 {
-                results.length==0?
+                results.length===0?
                 <div className='h-screen flex justify-center items-center'>
                     <h2 className='text-5xl'>No Results</h2>
                 </div>

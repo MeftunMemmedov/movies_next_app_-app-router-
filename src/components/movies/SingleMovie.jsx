@@ -12,7 +12,7 @@ const SingleMovie = ({movie}) => {
   return (
 <div className='flex justify-center items-center' key={movie.id}>
     <div className='w-11/12 my-5 relative overflow-hidden border border-slate-600 hover:border-white hover:border-dashed transition duration-500'>
-        <Image src={movie.poster} width={1920} height={1080} className='w-full h-full object-cover movie-image'/>
+        {movie.poster?<Image src={movie.poster} width={1920} height={1080} className='w-full h-full object-cover movie-image'/>:null}
 
         <div className={` absolute top-0  w-full h-full flex flex-col justify-center items-center movie-info opacity-0 hover:opacity-100 transition duration-500 px-1`}>
             <div className=' w-full flex justify-end absolute top-0'>
@@ -25,7 +25,7 @@ const SingleMovie = ({movie}) => {
             </Link>
         
                 <div className='flex justify-center h-10'>
-                    {movie.genre.slice(0,3).map((genre)=>{
+                    {movie.genre?.slice(0,2).map((genre)=>{
                         return <h3 className={`border border-black text-xl font-bold bg-amber-600 px-1 h-[30px] text-black ${movie.genre.length<2?'mx-1':'mx-0'}`}>{genre}</h3>
                     })}                               
                 </div>

@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
-import SearchResults from '../SearchResults'
+import SearchResults from './SearchResults'
 
 
 const url='https://flvxlsycpoxwclnqfrvr.supabase.co/rest/v1/Movies?select=*'
@@ -57,7 +57,7 @@ const SearchBar = () => {
       className='w-full h-full rounded-2xl bg-zinc-800 text-white px-3' 
       onBlur={handleBlur}
       />
-
+      
       <SearchResults 
       results={results} 
       resutlsVisible={resutlsVisible} 

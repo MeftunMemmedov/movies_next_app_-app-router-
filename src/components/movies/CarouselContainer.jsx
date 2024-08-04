@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Carousel from "react-multi-carousel";
-import SingleMovie from '../SingleMovie';
+import SingleMovie from '../movies/SingleMovie';
 
 
 const responsive = {

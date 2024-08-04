@@ -1,4 +1,4 @@
-import CarouselContainer from "@/components/CarouselContainer";
+import CarouselContainer from "@/components/movies/CarouselContainer";
 import Image from "next/image";
 import Link from "next/link";
 

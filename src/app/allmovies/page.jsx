@@ -1,4 +1,4 @@
-import SingleMovie from '@/components/SingleMovie'
+import SingleMovie from '@/components/movies/SingleMovie'
 import React from 'react'
 
 const url='https://flvxlsycpoxwclnqfrvr.supabase.co/rest/v1/Movies?select=*'
@@ -11,6 +11,8 @@ const options={
     Authorization:authorization
   }
 } 
+
+
 
 const getAllMovies=async()=>{
     const response=await fetch(url, options).then(res=>res.json())

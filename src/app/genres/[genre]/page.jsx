@@ -1,5 +1,5 @@
-import GenreDescription from '@/components/GenreDescription.jsx'
-import SingleMovie from '@/components/SingleMovie'
+import GenreDescription from '@/components/movies/GenreDescription'
+import SingleMovie from '@/components/movies/SingleMovie'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -39,7 +39,7 @@ const MoviesByGenre = async({params}) => {
                     <div className='w-1/2 h-full flex flex-col justify-center items-start'>
                         <h2 className='text-5xl font-bold mb-5'>{params.genre.charAt(0).toUpperCase()+params.genre.slice(1)} Movies</h2>
                         <GenreDescription param={params.genre}/>
-                        <Link href={''} className=' py-3 px-10 rounded-3xl bg-amber-500 text-black font-bold'>Sign Up</Link>
+                        {/* <Link href={''} className=' py-3 px-10 rounded-3xl bg-amber-500 text-black font-bold'>Sign Up</Link> */}
                     </div>
                 </div>
             </div>

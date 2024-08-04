@@ -32,6 +32,13 @@ body {
   }
 }
 
+input{
+  color: black;
+}
+
+select ,option{
+  color: black;
+}
 header{
   background: rgb(0,0,0);
 background: linear-gradient(256deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6404936974789917) 0%);
